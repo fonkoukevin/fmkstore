@@ -1,0 +1,95 @@
+.text{
+    padding-top: 190px;
+}
+.imgarrange{
+    padding-top: 70px;
+    padding-left: 90px;
+}
+.title{
+    text-align: center;
+    margin :0 auto 80px;
+    position: relative;
+    /* le relative est utilise quand on a un ::after,::before pour que les element qui herite aurons une postion relative */
+    line-height: 60px;
+    /* color:#555; */
+}
+.title::after{    
+
+    content: '';
+    background: #ff523b;
+    width: 120px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* indique just la postion en fonction de l'element parent */
+    
+}
+/* ::after c'est pour ajouter du contenu apres un element mais nous on ne veut pas ajouter du contenu juste une ligne(bordure) */
+
+.image-container {    
+    position: relative;
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.3) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.card:hover .gradient-overlay {
+    opacity: 1;
+}
+
+
+
+/* pour eviter de bouger les element de la page quand on fait un hover */
+    .card-container {
+        /* Ajout de position relative pour positionner correctement les éléments enfants */
+        position: relative;
+    }
+
+    .bag{
+        /* Prévoir l'espace pour le contenu caché */
+        height: 160px; /* Modifier la hauteur en fonction de vos besoins */
+        overflow: hidden; /* Masquer tout contenu qui dépasse cette hauteur */
+        transition: height 0.5s ease; /* Ajouter une transition douce */
+    }
+/* pour eviter de bouger les element de la page quand on fait un hover */
+
+.pet{
+    
+    margin-top: -25px;
+}
+
+
+.act{
+    /* text-align: center; */
+    position: relative;
+    /* le relative est utilise quand on a un ::after,::before pour que les element qui herite aurons une postion relative */
+    /* line-height: 60px; */
+    /* color:#555; */
+}
+.act::after{    
+
+    content: '';
+    background: green;
+    width: 15px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* indique just la postion en fonction de l'element parent */
+    
+}
+

@@ -1,0 +1,85 @@
+.bag{
+    /* Prévoir l'espace pour le contenu caché */
+    height: 175px; /* Modifier la hauteur en fonction de vos besoins */
+    overflow: hidden; /* Masquer tout contenu qui dépasse cette hauteur */
+    transition: height 0.5s ease; /* Ajouter une transition douce */
+}
+
+
+/* ajuster l'affichage du text et de l'image */
+.aligne{
+    margin-top: -50px;
+}
+.direct{
+    padding-right: 80px;
+    margin-top: -30px;
+}
+
+/* ajuster l'affichage du text et de l'image */
+
+
+.title{
+    text-align: center;
+    margin :0 auto 80px;
+    position: relative;
+    /* le relative est utilise quand on a un ::after,::before pour que les element qui herite aurons une postion relative */
+    line-height: 60px;
+    /* color:#555; */
+}
+.title::after{    
+
+    content: '';
+    background: #ff523b;
+    width: 30px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* indique just la postion en fonction de l'element parent */
+    
+}
+/* ::after c'est pour ajouter du contenu apres un element mais nous on ne veut pas ajouter du contenu juste une ligne(bordure) */
+
+
+
+
+
+.slide {
+ 
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    position: relative;
+   padding-left: -250px;
+}
+#element {
+    width: 1200px; /* Largeur totale des images (3 images de 400px de large) */
+    height: 300px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#element img {
+    width: 400px;
+    height: 300px;
+    float: left;
+}
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+#prev {
+    left: 10px;
+}
+#next {
+    right: 10px;
+}

@@ -1,0 +1,16 @@
+
+
+.banner{
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0,0.7)), url("/Pictures/ecommerce-2140604.jpg") center center fixed 
+    no-repeat;
+    background-size: cover;
+    height: 700px;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.8); /* Fond de la carte transparent */
+    border-radius: 4px; /* Coins arrondis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    width: 360px;
+    height: 370px;
+}
